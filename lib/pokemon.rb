@@ -25,6 +25,7 @@ class Pokemon
     db.execute(sql, name, type)
   end
   
+  # Find a pokemon from the db by their id number & returns a new Pokemon object
   def self.find
     
   end
