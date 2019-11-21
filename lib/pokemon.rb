@@ -27,7 +27,8 @@ class Pokemon
   
   # Find a pokemon from the db by their id number & returns a new Pokemon object
   def self.find(id, db)
-    
-    
+    sql = "SELECT * FROM pokemon where id = ?"
+    result = @db.execute(sql, id)[0]
+    new_pokemon = self.new(result[0], result[1], result[2])
   end
 end
